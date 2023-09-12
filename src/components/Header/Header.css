@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+}
+
+
+
+.topHeader,
+.topHeader ul,
+.bottomHeader,
+.bottomHeader ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+.topHeader {
+    /* background-color:#f7f1f2; */
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.topHeader h1 img {
+    height: 50px;
+    width: 80px;
+}
+
+.bottomHeader {
+    justify-content: center;
+    background-color:#f7e6e9;
+}
+
+.bottomHeader ul,
+.topHeader ul {
+    justify-content: center;
+    list-style: none;
+    background: none;
+}
+
+.bottomHeader ul li a,
+.topHeader ul li a {
+    text-decoration: none;
+    font-size: 21px;
+    color: #2F3C7E;
+    transition: all 0.8s ease;
+    padding: 10px 30px;
+}
+
+.topHeader ul li a:hover {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #ffd1d9;
+}
+
+.bottomHeader ul li a {
+    padding: 0px 20px;
+    transition: all 0.8s ease;
+}
+
+.bottomHeader ul li a:hover {
+    background-color: #ffd1d9;
+}
+
+
+
+.topHeader .searchButton input {
+    padding: 2px 10px;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    color:black;
+    background-color:#f7f1f2;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.topHeader .searchButton button {
+    padding: 2px 10px;
+    width: 80px;
+    font-size: 18px;
+    background-color: #2F3C7E ;
+    height: 30px;
+    color: white;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}

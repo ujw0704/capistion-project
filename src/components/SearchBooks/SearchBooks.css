@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.searchBooks{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    
+}
+.bookLink{
+    width: 14%;
+    height:350px;
+    margin: 40px;
+    text-decoration: none;
+    color: black;
+}
+.searchBook{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    /* background-color: gray; */
+    border-radius: 20px;
+    
+    text-align: center;
+}
+.searchBook img{
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    transition: all 0.7s ease;
+    box-shadow: 8px 8px 1rem 0.4rem rgb(213, 212, 212);
+    
+}
+.searchBook img:hover{
+    transform: scale(1.1);
+}
+.searchBook h1{
+    font-size: 19px;
+    text-align: center;
+    height: 12%;
+    margin-bottom: 10px;
+}
+.searchBook h3{
+    font-size: 15px;
+}
+.searchBook p{
+    color: red;
+    margin: 20px 0px 10px;
+}

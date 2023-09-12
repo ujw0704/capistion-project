@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.singleShowBook {
+    width: 100%;
+    padding: 3rem 0px;
+    display: flex;
+    justify-content: left;
+}
+
+.singleShowBook .left {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 10px;
+
+}
+
+.singleShowBook .left img {
+    width: 50%;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.7s ease;
+    box-shadow: 10px 10px 8px rgb(212, 211, 211);
+}
+.singleShowBook .left img:hover{
+    transform: scale(1.1);
+}
+
+.singleShowBook .right {
+    width: 55%;
+    text-align: left;
+}
+.singleShowBook .right a{
+    text-decoration: none;
+}
+.singleShowBook .right h1{
+    font-size: 25px;
+}
+
+.singleShowBook .right p {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.singleShowBook .right .other1Content,
+.singleShowBook .right .other2Content {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 350;
+}
+
+.singleShowBook .right .other1Content span {
+    color: blue;
+}
+
+.singleShowBook .right .other2Content span {
+    color: red;
+}
+
+
+.singleShowBook .right .other2,
+.singleShowBook .right .other1 {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+
+.singleShowBook .right .other2 .publishedDate {
+    color: red;
+}
+
+.singleShowBook .right .other2 .publisher,
+.singleShowBook .right .other2 .publishedDate,
+.singleShowBook .right .other1 .author,
+.singleShowBook .right .other1 .bookType {
+    font-size: 18px;
+    font-weight: 130;
+}
+
+.singleShowBook .right .other2 .publisher {
+    color: blue;
+  
+}
+
+.singleShowBook .right .other1 .author {
+    color: rgb(19, 92, 92);
+   
+}
+
+.singleShowBook .right .other1 .bookType {
+    color: brown;
+   
+}

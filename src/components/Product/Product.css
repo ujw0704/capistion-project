@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.books {
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+
+.books .left {
+    /* width: 20%; */
+    flex: 0.2;
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    height: 100vh;
+    background-color: #ffd1d9;
+
+    /* top:100px; */
+}
+
+.left ul {
+
+    width: 100%;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    list-style: none;
+}
+
+.left h2 {
+    font-size: 30px;
+    padding: 15px 0px;
+}
+
+.left ul li {
+    /* width: 100%; */
+    width: 70%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 10px;
+
+}
+
+.left ul li a {
+    border-radius: 2px;
+    /* margin-top: 20px; */
+    padding-top: 7px;
+    font-size: 22px;
+
+    text-align: center;
+    margin-top: 5%;
+    /* padding: 8px 20px; */
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    transition: all 0.8s ease;
+    color: #2F3C7E;
+    text-decoration: none;
+    background-color: white;
+}
+
+.left ul li a:hover {
+    background-color: #efe4e7 ;
+    color: #21307b;
+}
+
+.right {
+    /* width: 80%; */
+    flex: 0.8;
+    /* flex-direction: column; */
+
+}
+
+.book1 {
+    /* display: flex; */
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.singleBook {
+    width: 27%;
+    /* background-color: rgb(245, 237, 237); */
+   
+    /* background: linear-gradient(to top, #f4f4f3, #a6dabf); */
+  
+
+    text-align: center;
+    height: 300px;
+    position: relative;
+    margin: 2%;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+.bookRow h1{
+    margin: 20px 20px;
+}
+
+.singleBook h1 {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.singleBook img {
+    width: 60%;
+    /* position: absolute;
+    top: -20px;
+    left: 40%; */
+    height: 70%;
+}
+.singleBook h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
