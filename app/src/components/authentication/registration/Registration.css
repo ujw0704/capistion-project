@@ -1,0 +1,109 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.register{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:0;
+    position: relative;
+    background: url(../../../assets/images/login1.png) no-repeat scroll center / cover;
+}
+.register::before{
+    content: "";
+    z-index:1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.register .registerContent{
+    z-index:2;
+    width:33%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-right: 150px; */
+    border:  1px solid rgb(0, 0, 0);
+    /* font-size: 30px; */
+    height: 80%;
+    color: rgb(193, 193, 193);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 1px rgb(31, 30, 30);
+    background: none;
+    padding: 15px;
+
+}
+/* form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+.registerContent h1{
+    font-size: 55px;
+    text-align: center;
+  
+}
+.registerContent label{
+    font-size: 24px;
+    margin-top: 20px;
+}
+.registerContent input{
+    font-size: 20px;
+    background: none;
+    border:1px solid  black;
+    outline:gray;
+    margin-top: 20px;
+    color:  rgb(193, 193, 193);
+    box-shadow: 0px 0px 5px 2px rgb(32, 31, 31);
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.registerContent button{
+    margin: 15px 0px 15px 130px;
+    background: none;
+    outline:gray ;
+   
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 2px rgb(32, 31, 31);
+    border-radius: 20px;
+    text-align: center;
+    color:  rgb(193, 193, 193);
+    padding:5px 20px ;
+    
+}
+.registerContent button a{
+    font-size: 21px;
+    background: none;
+    text-decoration: none;
+    color:  rgb(193, 193, 193);
+    transition: all 0.8s ease;
+  
+}
+.registerContent button a:hover{
+    color: rgb(231, 231, 231) ;
+}
+.registerContent h2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.registerContent h2 a{
+    text-decoration: none;
+    transition:  all 0.8s ease;
+    color:  rgb(193, 193, 193);
+}
+.registerContent h2 a:hover{
+    color: rgb(231, 231, 231) ;
+    /* list-style:upper-latin; */
+}
