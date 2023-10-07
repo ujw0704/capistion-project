@@ -24,6 +24,7 @@ app.use(
       "https://book-shelf-react-app.onrender.com",
       "https://bookshelf-capstone.netlify.app",
       "https://capstion-frontend-bookshelf.vercel.app",
+      "https://bookshel-capstone-project.netlify.app"
     ],
     credentials: true,
   })
