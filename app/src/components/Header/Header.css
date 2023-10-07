@@ -93,3 +93,9 @@
     border-bottom-right-radius: 20px;
 
 }
+@media (max-width: 768px) {
+    .topHeader {
+        flex-direction: column;
+    }
+}
+    

@@ -6,21 +6,21 @@
 
 .wrapper {
     width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
 }
 
 .book {
     padding: 10px;
     display: flex;
     position: relative;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
-.arrow a:first-of-type ,
+.arrow a:first-of-type,
 .arrow a:last-of-type {
     position: absolute;
     top: 150px;
@@ -31,9 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    
 }
+
 .arrow a:first-of-type {
     left: 50px;
 }
@@ -42,13 +41,10 @@
     right: 50px;
 }
 
-
-.arrow a:first-of-type .css-i4bv87-MuiSvgIcon-root ,
-.arrow a:last-of-type .css-i4bv87-MuiSvgIcon-root  {
+.arrow a:first-of-type .css-i4bv87-MuiSvgIcon-root,
+.arrow a:last-of-type .css-i4bv87-MuiSvgIcon-root {
     font-size: 40px;
 }
-
-
 
 .book::-webkit-scrollbar {
     display: none;
@@ -77,11 +73,32 @@
     border-top-right-radius: 3px;
 }
 
-
-
 .box h3 {
     padding: 0px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 10px; 
+    }
+
+    .book {
+        flex-wrap: wrap; 
+    }
+
+    .arrow a:first-of-type,
+    .arrow a:last-of-type {
+        display: none; 
+    }
+
+    .box {
+        width: 100%; 
+        max-width: none; 
+        margin: 10px 0; 
+    }
 }

@@ -1,4 +1,4 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -16,11 +16,11 @@
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    padding-top: 10px;
+    /* padding-top: 10px;
 
-}
+} */
 
-.singleShowBook .left img {
+/* .singleShowBook .left img {
     width: 50%;
     height: 300px;
     border-radius: 5px;
@@ -97,4 +97,103 @@
 .singleShowBook .right .other1 .bookType {
     color: brown;
    
+}  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.singleShowBook {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+    align-items: center;
+    text-align: center; /* Center text content for smaller screens */
+}
+
+.singleShowBook .left {
+    width: 100%; /* Take up the full width for smaller screens */
+    padding: 10px 0;
+}
+
+.singleShowBook .left img {
+    width: 80%; /* Adjust image size for smaller screens */
+    max-width: 300px; /* Limit maximum image width */
+    height: auto; /* Maintain image aspect ratio */
+    border-radius: 5px;
+    transition: all 0.7s ease;
+    box-shadow: 10px 10px 8px rgb(212, 211, 211);
+}
+
+.singleShowBook .left img:hover {
+    transform: scale(1.1);
+}
+
+.singleShowBook .right {
+    width: 100%; /* Take up the full width for smaller screens */
+    padding: 10px 0;
+}
+
+.singleShowBook .right a {
+    text-decoration: none;
+}
+
+.singleShowBook .right h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+}
+
+.singleShowBook .right p {
+    text-align: justify;
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.singleShowBook .right .other1Content,
+.singleShowBook .right .other2Content {
+    margin-top: 10px;
+    font-size: 18px; /* Adjust font size for smaller screens */
+    font-weight: 350; /* Typo: Should be font-weight: 350; */
+}
+
+.singleShowBook .right .other1Content span {
+    color: blue;
+}
+
+.singleShowBook .right .other2Content span {
+    color: red;
+}
+
+.singleShowBook .right .other2,
+.singleShowBook .right .other1 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+    align-items: center;
+    margin: 10px 0;
+}
+
+.singleShowBook .right .other2 .publishedDate {
+    color: red;
+}
+
+.singleShowBook .right .other2 .publisher,
+.singleShowBook .right .other2 .publishedDate,
+.singleShowBook .right .other1 .author,
+.singleShowBook .right .other1 .bookType {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    font-weight: 130; /* Typo: Should be font-weight: 130; */
+}
+
+.singleShowBook .right .other2 .publisher {
+    color: blue;
+}
+
+.singleShowBook .right .other1 .author {
+    color: rgb(19, 92, 92);
+}
+
+.singleShowBook .right .other1 .bookType {
+    color: brown;
 }

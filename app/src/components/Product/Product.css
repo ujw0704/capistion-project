@@ -3,35 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+.arrow{
+    display: flex;
+}
 
 .books {
     width: 100%;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
 }
 
 .books .left {
-    /* width: 20%; */
     flex: 0.2;
     position: sticky;
     top: 0px;
     text-align: center;
     height: 100vh;
     background-color: #ffd1d9;
-
-    /* top:100px; */
 }
 
 .left ul {
-
     width: 100%;
-
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center; /* Center the content vertically */
     flex-direction: column;
     list-style: none;
 }
@@ -42,25 +38,20 @@
 }
 
 .left ul li {
-    /* width: 100%; */
-    width: 70%;
+    width: 80%; /* Adjust the width for smaller screens */
     height: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3px 10px;
-
+    margin: 3px 0; /* Adjust margin for smaller screens */
 }
 
 .left ul li a {
     border-radius: 2px;
-    /* margin-top: 20px; */
     padding-top: 7px;
-    font-size: 22px;
-
+    font-size: 20px; /* Adjust font size for smaller screens */
     text-align: center;
     margin-top: 5%;
-    /* padding: 8px 20px; */
     width: 100%;
     display: inline-block;
     height: 100%;
@@ -71,61 +62,73 @@
 }
 
 .left ul li a:hover {
-    background-color: #efe4e7 ;
+    background-color: #efe4e7;
     color: #21307b;
 }
 
 .right {
-    /* width: 80%; */
     flex: 0.8;
-    /* flex-direction: column; */
-
 }
 
 .book1 {
-    /* display: flex; */
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
 }
 
 .singleBook {
-    width: 27%;
-    /* background-color: rgb(245, 237, 237); */
-   
-    /* background: linear-gradient(to top, #f4f4f3, #a6dabf); */
-  
-
+    width: 45%; /* Adjust the width for smaller screens */
+    height: 350px; /* Adjust the height for smaller screens */
     text-align: center;
-    height: 300px;
-    position: relative;
-    margin: 2%;
+    margin: 2% 2%;
     padding: 10px 20px;
     border-radius: 20px;
-
 }
-.bookRow h1{
+
+.bookRow h1 {
     margin: 20px 20px;
 }
 
 .singleBook h1 {
-    font-size: 20px;
+    font-size: 18px; /* Adjust font size for smaller screens */
     margin: 10px 0px;
 }
 
 .singleBook img {
     width: 60%;
-    /* position: absolute;
-    top: -20px;
-    left: 40%; */
-    height: 70%;
+    height: 60%; /* Adjust the height for smaller screens */
+    object-fit: cover; /* Ensure images maintain their aspect ratio */
 }
-.singleBook h3{
+
+.singleBook h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+}
 
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    .books .left {
+        flex: 0.3; /* Adjust the width for smaller screens */
+    }
+
+    .left ul li {
+        width: 100%;
+    }
+
+    .singleBook {
+        width: 90%; /* Adjust the width for smaller screens */
+        height: 300px; /* Adjust the height for smaller screens */
+    }
+
+    .singleBook h1 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .singleBook img {
+        width: 80%;
+        height: 50%;
+    }
 }

@@ -1,21 +1,23 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-.register{
+
+.register {
     height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index:0;
+    z-index: 0;
     position: relative;
     background: url(../../../assets/images/login1.png) no-repeat scroll center / cover;
 }
-.register::before{
+
+.register::before {
     content: "";
-    z-index:1;
+    z-index: 1;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,87 +25,118 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.register .registerContent{
-    z-index:2;
-    width:33%;
 
+.register .registerContent {
+    z-index: 2;
+    width: 80%; /* Adjust the width for smaller screens */
+    max-width: 400px; /* Set a maximum width for larger screens */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* margin-right: 150px; */
-    border:  1px solid rgb(0, 0, 0);
-    /* font-size: 30px; */
+    border: 1px solid rgb(0, 0, 0);
     height: 80%;
     color: rgb(193, 193, 193);
     border-radius: 20px;
-    box-shadow: 0px 0px 5px 1px rgb(31, 30, 30);
+    /* box-shadow: 0px 0px 2px 1px rgb(31, 30, 30);  */
     background: none;
     padding: 15px;
+}
 
-}
-/* form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
-.registerContent h1{
-    font-size: 55px;
+.registerContent h1 {
+    font-size: 40px; /* Adjust font size for smaller screens */
     text-align: center;
-  
 }
-.registerContent label{
-    font-size: 24px;
+
+.registerContent label {
+    font-size: 20px; /* Adjust font size for smaller screens */
     margin-top: 20px;
 }
-.registerContent input{
-    font-size: 20px;
+
+.registerContent input {
+    font-size: 18px; /* Adjust font size for smaller screens */
     background: none;
-    border:1px solid  black;
-    outline:gray;
+    border: 1px solid black;
+    outline: gray;
     margin-top: 20px;
-    color:  rgb(193, 193, 193);
+    color: rgb(193, 193, 193);
     box-shadow: 0px 0px 5px 2px rgb(32, 31, 31);
     border-radius: 20px;
     padding: 5px 10px;
 }
-.registerContent button{
-    margin: 15px 0px 15px 130px;
+
+.registerContent button {
+    margin: 15px 0px 15px 0px; /* Adjust margin for smaller screens */
+    padding: 5px 15px; /* Adjust padding for smaller screens */
     background: none;
-    outline:gray ;
-   
+    outline: gray;
     border: 1px solid black;
     box-shadow: 0px 0px 5px 2px rgb(32, 31, 31);
     border-radius: 20px;
     text-align: center;
-    color:  rgb(193, 193, 193);
-    padding:5px 20px ;
-    
+    color: rgb(193, 193, 193);
 }
-.registerContent button a{
-    font-size: 21px;
+
+.registerContent button a {
+    font-size: 18px; /* Adjust font size for smaller screens */
     background: none;
     text-decoration: none;
-    color:  rgb(193, 193, 193);
+    color: rgb(193, 193, 193);
     transition: all 0.8s ease;
-  
 }
-.registerContent button a:hover{
-    color: rgb(231, 231, 231) ;
+
+.registerContent button a:hover {
+    color: rgb(231, 231, 231);
 }
-.registerContent h2{
+
+.registerContent h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 16px; /* Adjust font size for smaller screens */
 }
-.registerContent h2 a{
+
+.registerContent h2 a {
     text-decoration: none;
-    transition:  all 0.8s ease;
-    color:  rgb(193, 193, 193);
+    transition: all 0.8s ease;
+    color: rgb(193, 193, 193);
 }
-.registerContent h2 a:hover{
-    color: rgb(231, 231, 231) ;
-    /* list-style:upper-latin; */
+
+.registerContent h2 a:hover {
+    color: rgb(231, 231, 231);
 }
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    .register .registerContent {
+        width: 90%; /* Adjust the width for smaller screens */
+        max-width: none; /* Remove maximum width */
+    }
+
+    .registerContent h1 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .registerContent label {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .registerContent input {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .registerContent button {
+        margin: 15px 0px 15px 0px; /* Adjust margin for smaller screens */
+        padding: 5px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .registerContent button a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .registerContent h2 {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+

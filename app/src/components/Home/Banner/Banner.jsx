@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Banner.css";
 import { useLoginContext } from "../../../context/login.context";
+
 import { useBookContext } from "../../../context";
 import { getRandomBook } from "../../../utils";
 

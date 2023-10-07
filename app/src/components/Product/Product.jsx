@@ -17,7 +17,7 @@ export const Product = () => {
   return (
     <>
       <div className="books">
-        <div className="left">
+        {/* <div className="left">
           <h2>LIBRARY</h2>
           <ul>
             <li>
@@ -57,7 +57,7 @@ export const Product = () => {
               <Link to="">Short Stories</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="right">
           {isLoading ? (
             <StyledBox>

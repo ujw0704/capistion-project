@@ -43,9 +43,9 @@ function Header() {
             )}
           </div>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/cart">Cart</Link>
-            </li>
+            </li> */}
             <li style={{ textTransform: "uppercase" }}>
               {isLoggedIn ? (
                 localStorage.getItem("username")
@@ -70,12 +70,12 @@ function Header() {
             <li>
               <Link to="/product">Books</Link>
             </li>
-            <li>
+             {/* <li>
               <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/service">Service</Link>
-            </li>
+            </li> */}
+            {/* <li>
+              <Link to="/service">Service</Link> 
+            </li> */}
           </ul>
         </div>
       </header>

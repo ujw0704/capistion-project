@@ -1,23 +1,42 @@
-*{
+
+
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-footer{
+
+footer {
     display: flex;
-    height: 300px;
+    flex-wrap: wrap; 
+    height: auto; 
     align-items: center;
-    justify-content:space-around;
-    background-color:#eddadb;
+    justify-content: center;
+    background-color: #eddadb;
     color: #2F3C7E;
-    padding: 0px 50px;
+    padding: 20px; 
 }
-ul{
+
+ul {
     list-style: none;
 }
-.firstList ul li{
+
+.firstList ul li {
     list-style: none;
-    font-size: 22px;
-    margin: 20px 0;
+    font-size: 20px; 
+    margin: 10px 0; 
 }
- 
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; 
+        text-align: center;
+        padding: 20px;
+    }
+
+    .firstList ul li {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin: 5px 0; /* Adjust margin for better spacing on smaller screens */
+    }
+}

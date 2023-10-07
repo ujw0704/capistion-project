@@ -1,21 +1,13 @@
-/* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
+import { useEffect, useState } from "react";
 import ".././Home.css";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-// import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-// import book from "../../../assets/images/book.jpg";
 import "./Row.css";
-import { axiosInstance } from "../../../api";
 import { useBookContext } from "../../../context";
 import { filterBooksWithCategory } from "../../../utils";
 import { Box, CircularProgress, Typography, styled } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Likes from "./Likes";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -34,8 +26,6 @@ const Row = (props) => {
   const navigate = useNavigate();
   const { books, isLoading } = useBookContext();
   const { endpoint = "", heading = "" } = props;
-  // const [isWishListed, setIsWishListed] = useState(false);
-  const [wishListedBooks, setWishListedBooks] = useState([]);
   const [filteredBooks, setFilteredBooks] = useState(books ?? []);
 
   useEffect(() => {
@@ -46,25 +36,6 @@ const Row = (props) => {
   function titleEditor(data) {
     return data.length > 20 ? data.slice(0, 20) + "...." : data;
   }
-
-  const isBookWishListed = (bookId) => {
-    return wishListedBooks.includes(bookId);
-  };
-
-  const handleWishList = async (bookId = "") => {
-    try {
-      const result = await axiosInstance.post(`/books/like/${bookId}`);
-      if (result.status === 201) {
-        if (isBookWishListed(bookId)) {
-          setWishListedBooks(wishListedBooks.filter((id) => id !== bookId));
-        } else {
-          setWishListedBooks([...wishListedBooks, bookId]);
-        }
-      }
-    } catch (err) {
-      console.log(err.response.data);
-    }
-  };
 
   const handleEyeIconClick = (e, book) => {
     e.preventDefault();
@@ -77,14 +48,6 @@ const Row = (props) => {
     <div className="wrapper">
       <h1>{heading}</h1>
       <div className="book">
-        <div className="arrow">
-          <Link to="">
-            <ArrowBackIosIcon />
-          </Link>
-          <Link to="">
-            <ArrowForwardIosIcon />
-          </Link>
-        </div>
         <>
           {!filteredBooks?.length && !isLoading && (
             <div>
@@ -111,20 +74,8 @@ const Row = (props) => {
                     >
                       <RemoveRedEyeOutlinedIcon />
                     </span>
-                    <span>
-                      <div
-                        role="button"
-                        style={{ cursor: "pointer" }}
-                        onClick={() => handleWishList(book._id)}
-                      >
-                        {isBookWishListed(book._id) ? (
-                          <FavoriteIcon sx={{ color: "red" }} />
-                        ) : (
-                          <FavoriteBorderIcon />
-                        )}
-                        {book.likes.length}
-                      </div>
-                    </span>
+                    {/* Like Component */}
+                    <Likes bookId={book._id} />
                   </h3>
                 </div>
               );
